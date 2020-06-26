@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 구룸 ( 9ooo Room )
-email: 9ooo.rooom@gmail.com
+title: 구룸 ( 9ooo Room ) # 페이지 메인 타이틀
+email: 9ooo.rooom@gmail.com #
 author: 9ooo Room
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -29,11 +29,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://9oooroom.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/vsoch/docsy-jekyll"
-github_user: "vsoch"
-github_repo: "docsy-jekyll"
+repo: "https://github.com/9oooroom/9oooroom.github.io"
+github_user: "9oooroom"
+github_repo: "9oooroom.github.io"
 
-# Optional
+# Optional 
 twitter: vsoch
 linkedin: vsochat
 dockerhub: vanessa
