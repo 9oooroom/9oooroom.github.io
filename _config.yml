@@ -2,92 +2,42 @@
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
+# yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-
-title: 구룸 ( 9ooo Room ) # 페이지 메인 타이틀
-email: 9ooo.rooom@gmail.com #
-author: 9ooo Room
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
-# DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
+title: Alain's Tech Blog
+name: Alain's Tech Blog
+description: 
+  This is a blog of someone passionate about technology who wants to share some of the things he knows
+  about Application Development, Integration, Cloud, Big Data and Digital Transformation
 baseurl: "" # the subpath of your site, e.g. /blog
+github_username:  alainpham
 
-# This is mostly for testing
-url: "https://9oooroom.github.io" # the base hostname & protocol for your site
-
-# Social (First three Required)
-repo: "https://github.com/9oooroom/9oooroom.github.io"
-github_user: "9oooroom"
-github_repo: "9oooroom.github.io"
-
-# Optional 
-instagram: juuuuunnn____
-
-# Should there be feedback buttons at the bottom of pages?
-feedback: true
-
-# Link to a privacy policy in footer, uncomment and define if wanted
-# privacy: https://domain.com/privacy
-
-# google-analytics: UA-XXXXXXXXXX
-# Image and (square) dimension for logo (don't start with /)
-# If commented, will use material hat theme
-# logo: "assets/img/logo/SRCC-square-red.png"
-logo_pixels: 34
-color: "#30638e"
-# color: "#8c1515" # primary color for header, buttons
+# jekyll-paginate configuration
+paginate: 10
 
 # Build settings
 markdown: kramdown
+#theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+include: ["_pages"]
+permalink: /posts/:title/
+excerpt_separator: <!--more-->
+author: http://www.linkedin.com/in/alainpham
 
-# If you add tags to pages, define this variable to link them to some external search
-# If you want to link to tags locally on the site, leave this commented out
-# tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
-tag_color: primary # danger, success, warning, primary, info, secondary
+host: 0.0.0.0
 
-accentColor: red # purple, green, etc.
-themeColor: red # purple, green, blue, orange, purple, grey
-fixedNav: 'true' # true or false
-
-permalink: /:year/:title/
-markdown: kramdown
-exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
-
-# Collections
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:path
-
-# Defaults
-defaults:
-  - scope:
-      path: "_docs"
-      type: "docs"
-    values:
-      layout: page
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: "posts"
-      type: "posts"
-    values:
-      layout: "post"
