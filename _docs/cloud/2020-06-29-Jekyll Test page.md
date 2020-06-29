@@ -2,6 +2,7 @@
 title:  "Cloud menu Test md"
 date:   2020-06-29 15:54:21
 categories: jekyll update
+description: 테스트 페이지의 위치 추적을 위함 입니다.
 badges:
  - type: danger
    tag: TEST
