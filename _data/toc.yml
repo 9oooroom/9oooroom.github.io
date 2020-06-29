@@ -21,3 +21,5 @@
       url: "about"
     - title: "News"
       url: "news"
+    - title: "Cloud"
+      url: "docs/cloud"
