@@ -1,0 +1,76 @@
+---
+layout: default
+title: "IAM 권한 정책 추가"
+date: 2020-07-06 21:27:00 +0200
+published: 2020-07-06 21:27:00 +0200
+comments: true
+categories: AWS , Cloud
+tags: [AWS, IAM, Cloud]
+---
+
+<p>
+    AWS Identity and Access Managerment (IAM) 는 AWS 고객이 AWS에서 사용자 및 사용자 권한을 
+    관리 할 수 있도록하는 웹 서비스 이다. 
+    IAM을 사용하면 사용자, 액세스키 와 같은 보안 자격 증명 및 사용자가 액세스 할 수 있는 
+    AWS 리소스를 제어하는 권한을 중앙에서 관리 할 수 있다.
+</p>
+
+<!--more-->
+
+<h2>Project</h2>
+<p>
+    	사전 생성 된 IAM. 사용자 및 그룹 탐색
+    	사전 생성 된 그룹에 적용된 IAM 정책 검사
+    	실제 시나리오에 따라 특정 기능을 사용하는 그룹에 사용자 추가
+    	IAM 로그인 URL 찾기 및 사용
+    	서비스 액세스에 대한 정책의 영향 확인
+</p>
+
+<h2>IAM definition</h2>
+<p>
+    	IAM 사용자 및 액세스 관리 : 사용자를 생성하고 개별 보안 자격 증명을 할당, 사용자가 수행 할 수 있는 작업을 제어하는 권한을 관리 할 수 있다.
+    	IAM 역할 및 권한 관리 : IAM 역할은 AWS에서 자격 증명을 수행 할 수 있고 수행 할 수 없는 것을 결정하는 권한 정책이 있는 AWS자격 증명이라는 점에서 사용자와 유사하다.
+    	페더레이션 사용자 및 사용 권한 관리 : ID 페더레이션을 액세스 리소스, 각 ID에 대한 IAM 사용자를 생성 할 필요없이 AWS API를 호출하려면 AWS 관리 콘솔에 액세스하는 기업에서 기존 사용자를 허용 함
+
+</p>
+
+<h2>Business Scenario</h2>
+<p>
+    귀사는 Amazon Web Service의 사용을 늘리고 있으며 
+    많은 Amazon EC2 인스턴스와 많은 Amazon S3 스토리지를 사용하고 있습니다. 
+    직무에 따라 새로운 직원에게 액세스 권한을 부여하려고 합니다.
+</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">사용자</th>
+    <th class="tg-0pky">그룹</th>
+    <th class="tg-0pky">권한</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">USER-1</td>
+    <td class="tg-0pky">S3-Support</td>
+    <td class="tg-0pky">Amazon S3에 대한 읽기 전용 액세스</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">USER-2</td>
+    <td class="tg-0pky">EC2-Support</td>
+    <td class="tg-0pky">Amazon EC2에 대한 읽기 전용 액세스</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">USER-3</td>
+    <td class="tg-0pky">EC2-Admin</td>
+    <td class="tg-0pky">Amazon EC2 인스턴스 보기, 시작 및 중지 </td>
+  </tr>
+</tbody>
+</table>
