@@ -90,6 +90,7 @@ tags: [AWS, IAM, Cloud]
 	src="/assets/images/{{page.id}}/group.png" alt="group"/>
 </a>
 
+
 <p>
   여러 사용자들을 묶을 수 있는 그룹이 존재 한다.
   해당 그룹은 EC2-Support 그룹이며 EC2를 관리하기 위한 
@@ -97,6 +98,38 @@ tags: [AWS, IAM, Cloud]
   관리형 정책은 IAM 사용자 및 그룹에 연결할 수 있는 사전 구축 된 정책(AWS 또는 관리자가 구축)
   이 될 수 있다. 정책이 업데이트 되면 정책 변경 사항이 정책에 연결된 모든 사용자 및 그룹에 즉시적용된다.
 </p>
+
+{% highlight json %}
+{
+"Version": "2012-10-17",
+"Statement": [
+{
+"Effect": "Allow",
+"Action": "ec2:Describe*",
+"Resource": "*"
+},
+{
+"Effect": "Allow",
+"Action": "elasticloadbalancing:Describe*",
+"Resource": "*"
+},
+{
+"Effect": "Allow",
+"Action": [
+"cloudwatch:ListMetrics",
+"cloudwatch:GetMetricStatistics",
+"cloudwatch:Describe*"
+],
+"Resource": "*"
+},
+{
+"Effect": "Allow",
+"Action": "autoscaling:Describe*",
+"Resource": "*"
+}
+]
+}
+{% endhighlight%}
 
 <p>
   AmazonEC2ReadOnlyAccess 정책 확인을 하면 다음과 같다.
