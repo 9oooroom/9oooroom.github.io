@@ -18,32 +18,20 @@ tags: [AWS, IAM, Cloud]
 <!--more-->
 
 <h2>Project</h2>
-<p>
-    · 사전 생성 된 IAM. 사용자 및 그룹 탐색
-</p>
-<p>
-    · 사전 생성 된 그룹에 적용된 IAM 정책 검사
-</p>
-<p>    
-    · 실제 시나리오에 따라 특정 기능을 사용하는 그룹에 사용자 추가
-</p>
-<p>
-    · IAM 로그인 URL 찾기 및 사용
-</p>
-<p>
-    · 서비스 액세스에 대한 정책의 영향 확인
-</p>
+<ul>
+  <li>사전 생성 된 IAM. 사용자 및 그룹 탐색</li>
+  <li>사전 생성 된 그룹에 적용된 IAM 정책 검사</li>
+  <li>실제 시나리오에 따라 특정 기능을 사용하는 그룹에 사용자 추가</li>
+  <li>IAM 로그인 URL 찾기 및 사용</li>
+  <li>서비스 액세스에 대한 정책의 영향 확인</li>
+</ul>
 
 <h2>IAM definition</h2>
-<p>
-    · IAM 사용자 및 액세스 관리 : 사용자를 생성하고 개별 보안 자격 증명을 할당, 사용자가 수행 할 수 있는 작업을 제어하는 권한을 관리 할 수 있다.
-</p>
-<p>
-    · IAM 역할 및 권한 관리 : IAM 역할은 AWS에서 자격 증명을 수행 할 수 있고 수행 할 수 없는 것을 결정하는 권한 정책이 있는 AWS자격 증명이라는 점에서 사용자와 유사하다.
-</p>
-<p>
-    · 페더레이션 사용자 및 사용 권한 관리 : ID 페더레이션을 액세스 리소스, 각 ID에 대한 IAM 사용자를 생성 할 필요없이 AWS API를 호출하려면 AWS 관리 콘솔에 액세스하는 기업에서 기존 사용자를 허용 함
-</p>
+<ul>
+  <li>IAM 사용자 및 액세스 관리 : 사용자를 생성하고 개별 보안 자격 증명을 할당, 사용자가 수행 할 수 있는 작업을 제어하는 권한을 관리 할 수 있다.</li>
+  <li>IAM 역할 및 권한 관리 : IAM 역할은 AWS에서 자격 증명을 수행 할 수 있고 수행 할 수 없는 것을 결정하는 권한 정책이 있는 AWS자격 증명이라는 점에서 사용자와 유사하다.</li>
+  <li>페더레이션 사용자 및 사용 권한 관리 : ID 페더레이션을 액세스 리소스, 각 ID에 대한 IAM 사용자를 생성 할 필요없이 AWS API를 호출하려면 AWS 관리 콘솔에 액세스하는 기업에서 기존 사용자를 허용 함</li>
+</ul>
 
 <h2>Business Scenario</h2>
 <p>
@@ -85,3 +73,11 @@ tags: [AWS, IAM, Cloud]
   </tr>
 </tbody>
 </table>
+
+<h3>사용자 확인 (User confirmation)</h3>
+<a href="/assets/images/{{page.id}}/1.png"> <img
+	class="center-block img-responsive"
+	src="/assets/images/{{page.id}}/1.png" alt="user confirmation"/></a>
+<p>
+  콘솔화면에서 기존의 유저를 확인한다 해당 그림에는 user-1,user-2,user-3,root-qwld,awsstudent 라는 5가지의 계정이 생성된걸 확인 할 수 있다.
+</p>
