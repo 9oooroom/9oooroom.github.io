@@ -75,10 +75,64 @@ tags: [AWS, IAM, Cloud]
 </table>
 
 <h3>사용자 확인 (User confirmation)</h3>
-<a href="/assets/images/{{page.id}}/1.png"> <img
+<a href="/assets/images/{{page.id}}/user-confir.png"> <img
 	class="center-block img-responsive"
-	src="/assets/images/{{page.id}}/1.png" alt="user confirmation"/></a>
+	src="/assets/images/{{page.id}}/user-confir.png" alt="user confirmation"/></a>
 <p>
   콘솔화면에서 기존의 유저를 확인한다 해당 그림에는 user-1,user-2,user-3,root-qwkl,awsstudent 라는 5가지의 계정이 생성된걸 확인 할 수 있다.
   여기서 사용할 계정은 비지니스 시나리오에 있는 user-1,user-2,user-3 계정에 대한 설정 변경을 하려고 한다.
 </p>
+
+<h3>그룹 (Group)</h3>
+<a href="/assets/images/{{page.id}}/group.png"> <img
+	class="center-block img-responsive"
+	src="/assets/images/{{page.id}}/group.png" alt="group"/></a>
+<p>
+  여러 사용자들을 묶을 수 있는 그룹이 존재 한다.
+  해당 그룹은 EC2-Support 그룹이며 EC2를 관리하기 위한 
+  관리형 정책 (AmazonEC2ReadOnlyAccess) 연결되어 있음을 확인 할 수 있다.
+  관리형 정책은 IAM 사용자 및 그룹에 연결할 수 있는 사전 구축 된 정책(AWS 또는 관리자가 구축)
+  이 될 수 있다. 정책이 업데이트 되면 정책 변경 사항이 정책에 연결된 모든 사용자 및 그룹에 즉시적용된다.
+</p>
+
+{% highlight json %}
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "ec2:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "elasticloadbalancing:Describe*",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:ListMetrics",
+                "cloudwatch:GetMetricStatistics",
+                "cloudwatch:Describe*"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "autoscaling:Describe*",
+            "Resource": "*"
+        }
+    ]
+}
+{% highlightend %}
+
+<p>
+  AmazonEC2ReadOnlyAccess 정책 확인을 하면 다음과 같다.
+</p>
+<ul>
+  <li>Effect는<b>허용</b> 또는 <b>거부</b> 권한을 설정</li>
+  <li>Action은 AWS 서비스에 대해 수행 할 수 있는 API호출을 지정 한다</li>
+  <li>Resource는 정책 규칙이 적용되는 엔터티의 범위를 정의 한다 (EX : 특정 Amazon S3 버킷 또는
+  Amazon EC2 인스턴스 또는 *는 모든 리소스를 의미한다.)</li>
+</ul>
