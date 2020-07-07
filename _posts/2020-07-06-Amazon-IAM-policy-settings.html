@@ -98,38 +98,6 @@ tags: [AWS, IAM, Cloud]
   이 될 수 있다. 정책이 업데이트 되면 정책 변경 사항이 정책에 연결된 모든 사용자 및 그룹에 즉시적용된다.
 </p>
 
-{% comment %} {% highlight json %}
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": "ec2:Describe*",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "elasticloadbalancing:Describe*",
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudwatch:ListMetrics",
-                "cloudwatch:GetMetricStatistics",
-                "cloudwatch:Describe*"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": "autoscaling:Describe*",
-            "Resource": "*"
-        }
-    ]
-}
-{% highlightend %} {% endcomment %}
-
 <p>
   AmazonEC2ReadOnlyAccess 정책 확인을 하면 다음과 같다.
 </p>
