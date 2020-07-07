@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Docker"
+title: "Docker 정의 하기"
 date: 2020-07-07 23:07:00 +0200
 published: 2020-07-07 23:07:00 +0200
 comments: true
