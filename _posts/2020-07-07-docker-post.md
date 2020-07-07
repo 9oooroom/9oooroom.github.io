@@ -8,14 +8,10 @@ categories: Docker
 tags: [Docker]
 ---
 
+#### 도커
 도커는 __컨테이너__ 기반의 오픈소스 가상화 플랫폼입니다.
 
-<!--more-->
-
-## 도커
-도커는 __컨테이너__ 기반의 오픈소스 가상화 플랫폼입니다.
-
-## 컨테이너
+#### 컨테이너
 
 <a href="/assets/images/{{page.id}}/container-what-is-container.png"> <img
 	class="center-block img-responsive"
