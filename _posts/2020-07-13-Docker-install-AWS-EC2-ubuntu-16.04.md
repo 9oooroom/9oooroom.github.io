@@ -24,6 +24,7 @@ EC2 ubuntu instance에 Docker를 설치해보자.
 <br/>
 
 **1.2 Uninstall old versions**
+
 기존에 있던 구버전 docker 삭제 확인
 ```
 $ sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -34,6 +35,7 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 * [Docker의 리포지토리](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)를 설정하고 설치
 * DEB 패키지를 다운로드 하여 수동 설치
 해당 문서에서는 Docker 리포지토리를 설정하여 설치를 진행한다.
+
 <br/>
 
 **1.4 리포지토리 설정**
