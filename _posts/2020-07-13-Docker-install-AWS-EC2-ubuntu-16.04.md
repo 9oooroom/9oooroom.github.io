@@ -20,3 +20,7 @@ EC2 ubuntu instance에 Docker를 설치해보자.
 
 ##### 순서
 1.AWS EC2 Ubuntu 16.04에 Docker install
+
+'''
+curl -fsSL https://get.docker.com/ | sudo sh
+'''
