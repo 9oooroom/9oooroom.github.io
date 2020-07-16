@@ -18,7 +18,7 @@ EC2 ubuntu instance에 Docker를 설치해보자.
 
 <!--more-->
 
-##### Prerequisites
+#### 1. Prerequisites
 1.1 OS requirements
 * Ubuntu Xenial 16.04 (LTS) 사용
 
@@ -37,7 +37,8 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
  1.1 HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
 ```
 $ sudo apt-get update
-
+```
+```
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
