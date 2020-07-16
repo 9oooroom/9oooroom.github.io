@@ -34,7 +34,8 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 해당 문서에서는 Docker 리포지토리를 설정하여 설치를 진행한다.
 
 1.4 리포지토리 설정
-1.4.1HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
+
+1.4.1 HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
 
 ```
 $ sudo apt-get update
