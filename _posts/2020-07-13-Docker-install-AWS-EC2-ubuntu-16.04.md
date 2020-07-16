@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Docker install AWS EC2 Ubuntu 16.04"
-date: 2020-07-13 19:30:00 +0200
+date: 2020-07-16 19:30:00 +0200
 published: 2020-07-13 19:30:00 +0200
 comments: true
 categories: Docker
@@ -21,6 +21,6 @@ EC2 ubuntu instance에 Docker를 설치해보자.
 ##### 순서
 1.AWS EC2 Ubuntu 16.04에 Docker install
 
-'''
+\~\~~
 curl -fsSL https://get.docker.com/ | sudo sh
-'''
+~~\~\
