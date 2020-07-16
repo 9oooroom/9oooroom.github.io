@@ -86,3 +86,19 @@ $ sudo apt-get update
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 <br/>
+
+특정 버전 install
+
+```
+$ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
+```
+
+<br/>
+
+
+1.4.5 설치 확인
+
+'hello-world' 이미지를 실행하여 docker engine이 설치되었는지 확인 한다.
+```
+$ sudo docker run hello-world
+```
