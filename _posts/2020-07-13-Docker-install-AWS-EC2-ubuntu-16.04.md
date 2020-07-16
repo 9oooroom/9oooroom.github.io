@@ -18,9 +18,30 @@ EC2 ubuntu instance에 Docker를 설치해보자.
 
 <!--more-->
 
-##### 순서
-1.AWS EC2 Ubuntu 16.04에 Docker install
+##### Prerequisites
+1.1 OS requirements
+* Ubuntu Xenial 16.04 (LTS) 사용
 
+1.2 Uninstall old versions
+기존에 있던 구버전 docker 삭제 확인
 ```
-curl -fsSL https://get.docker.com/ | sudo sh
+$ sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+1.3 install
+* [Docker의 리포지토리](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)를 설정하고 설치
+* DEB 패키지를 다운로드 하여 수동 설치
+해당 문서에서는 Docker 리포지토리를 설정하여 설치를 진행한다.
+
+- 리포지토리 설정
+ 1.1 HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
+```
+$ sudo apt-get update
+
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
 ```
