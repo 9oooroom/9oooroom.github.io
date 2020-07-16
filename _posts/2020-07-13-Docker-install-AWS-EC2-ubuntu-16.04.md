@@ -48,3 +48,33 @@ $ sudo apt-get install \
     gnupg-agent \
     software-properties-common
 ```
+
+1.4.2 Docker의 공식 GPG Key 값 추가
+```
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+지문 중 **'0EBF CD88'** 해당 지문 키가 있는지 확인 한다.
+
+```
+$ sudo apt-key fingerprint 0EBFCD88
+
+pub   rsa4096 2017-02-22 [SCEA]
+      9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
+sub   rsa4096 2017-02-22 [S]
+```
+
+1.4.3 레포지토리 추가하기
+```
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+1.4.4 Docker ENGINE Install
+apt 패키지 색인을 업데이트 하고 최신 버전의 Docker Engine 및 컨테이너를 설치
+```
+$ sudo apt-get update
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
