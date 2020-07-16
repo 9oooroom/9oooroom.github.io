@@ -34,6 +34,7 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 **1.3 install**
 * [Docker의 리포지토리](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)를 설정하고 설치
 * DEB 패키지를 다운로드 하여 수동 설치
+
 해당 문서에서는 Docker 리포지토리를 설정하여 설치를 진행한다.
 
 <br/>
@@ -125,5 +126,6 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 <br/>
+
 
 출처 : [Docker Docs - Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
