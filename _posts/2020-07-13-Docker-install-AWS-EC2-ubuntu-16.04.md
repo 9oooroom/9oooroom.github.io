@@ -40,7 +40,7 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 
 **1.4 리포지토리 설정**
 
-1.4.1 HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
+**1.4.1 HTTP를 이용한 설치**
 
 ```
 $ sudo apt-get update
@@ -55,7 +55,7 @@ $ sudo apt-get install \
 ```
 <br/>
 
-1.4.2 Docker의 공식 GPG Key 값 추가
+**1.4.2 Docker의 공식 GPG Key 값 추가**
 ```
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
@@ -70,7 +70,8 @@ uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
 sub   rsa4096 2017-02-22 [S]
 ```
 <br/>
-1.4.3 레포지토리 추가하기
+
+**1.4.3 레포지토리 추가하기**
 ```
 $ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -78,7 +79,8 @@ $ sudo add-apt-repository \
    stable"
 ```
 <br/>
-1.4.4 Docker ENGINE Install
+
+**1.4.4 Docker ENGINE Install**
 
 apt 패키지 색인을 업데이트 하고 최신 버전의 Docker Engine 및 컨테이너를 설치
 ```
@@ -87,7 +89,7 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 <br/>
 
-특정 버전 install
+**특정 버전 install**
 
 ```
 $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
@@ -96,7 +98,7 @@ $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING>
 <br/>
 
 
-1.4.5 설치 확인
+**1.4.5 설치 확인**
 
 'hello-world' 이미지를 실행하여 docker engine이 설치되었는지 확인 한다.
 ```
@@ -124,4 +126,4 @@ For more examples and ideas, visit:
 ```
 <br/>
 
-출처 : [Docker Docs-Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+출처 : [Docker Docs - Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
