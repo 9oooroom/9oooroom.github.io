@@ -59,7 +59,7 @@ $ sudo apt-get install \
 ```
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
-지문 중 **'0EBF CD88'** 해당 지문 키가 있는지 확인 한다.
+지문 중 **`0EBF CD88`** 해당 지문 키가 있는지 확인 한다.
 
 ```
 $ sudo apt-key fingerprint 0EBFCD88
@@ -100,7 +100,7 @@ $ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING>
 
 **1.4.5 설치 확인**
 
-'hello-world' 이미지를 실행하여 docker engine이 설치되었는지 확인 한다.
+`hello-world` 이미지를 실행하여 `docker engine`이 설치되었는지 확인 한다.
 ```
 $ sudo docker run hello-world
 Hello from Docker!
