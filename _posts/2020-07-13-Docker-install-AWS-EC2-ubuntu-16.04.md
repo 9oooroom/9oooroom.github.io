@@ -35,6 +35,7 @@ $ sudo apt-get remove docker docker-engine docker.io containerd runc
 
 **1.4 리포지토리 설정**
 
+
 1.4.1 HTTPS를 통해 저장소를 사용할수 있도록 apt 패키지 색인을 업데이트 한다.
 
 ```
@@ -48,6 +49,7 @@ $ sudo apt-get install \
     gnupg-agent \
     software-properties-common
 ```
+
 
 1.4.2 Docker의 공식 GPG Key 값 추가
 ```
@@ -64,6 +66,7 @@ uid           [ unknown] Docker Release (CE deb) <docker@docker.com>
 sub   rsa4096 2017-02-22 [S]
 ```
 
+
 1.4.3 레포지토리 추가하기
 ```
 $ sudo add-apt-repository \
@@ -71,6 +74,7 @@ $ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 ```
+
 
 1.4.4 Docker ENGINE Install
 apt 패키지 색인을 업데이트 하고 최신 버전의 Docker Engine 및 컨테이너를 설치
