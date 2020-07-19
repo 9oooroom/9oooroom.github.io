@@ -43,6 +43,7 @@ tags: [Docker, AWS, Ubuntu]
 </tbody>
 </table>
 <br>
+<br>
 
 예를 들어 Ubuntu 파일 시스템을 이용한 정의한 도커 이미지로 도커 컨테이너를 생성하면 아래 그림과 같다.
 
@@ -51,7 +52,7 @@ tags: [Docker, AWS, Ubuntu]
 	class="center-block img-responsive"
 	src="/assets/images/{{page.id}}/container-and-image.jpg" alt="container-image"/>
 </a>
-
+<br>
 <br>
 도커 이미지 하나로 여러 개의 컨테이너를 생성할 수 있다.
 위 그림에서 도커 이미지는 우분투 파일 시스템을 실행하는 애플리케이션과 파일을 담고 있다.
