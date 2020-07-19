@@ -24,7 +24,7 @@ tags: [Docker, AWS, Ubuntu]
 .tg .tg-dgfm{background-color:#c0c0c0;border-color:inherit;font-size:12px;text-align:left;vertical-align:top}
 .tg .tg-73a0{border-color:inherit;font-size:12px;text-align:left;vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg" style="margin-left: auto;margin-right: auto;">
 <thead>
   <tr>
     <th class="tg-dgfm">개념</th>
@@ -42,18 +42,22 @@ tags: [Docker, AWS, Ubuntu]
   </tr>
 </tbody>
 </table>
+<br>
 
 예를 들어 Ubuntu 파일 시스템을 이용한 정의한 도커 이미지로 도커 컨테이너를 생성하면 아래 그림과 같다.
 
+<br>
 <a href="/assets/images/{{page.id}}/container-and-image.jpg"> <img
 	class="center-block img-responsive"
 	src="/assets/images/{{page.id}}/container-and-image.jpg" alt="container-image"/>
 </a>
 
+<br>
 도커 이미지 하나로 여러 개의 컨테이너를 생성할 수 있다.
 위 그림에서 도커 이미지는 우분투 파일 시스템을 실행하는 애플리케이션과 파일을 담고 있다.
 컨테이너가 생성될 때 이미지로 부터 구체화하고 컨테이너 안의 우분투 파일 시스템상에서 애플리케이션이 실행 된다.
 컨테이너로 애플리케이션을 실행하려면 컨테이너 형태로 구체화될 템플릿 역할을 하는 이미지를 먼저 만들어야 한다.
+<br>
 
 2.도커 컨테이너 만들기
 
