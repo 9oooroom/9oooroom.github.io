@@ -13,7 +13,7 @@ tags: [Docker, AWS, Ubuntu]
 
 <!--more-->
 
-1. 컨테이너로 애플리케이션 실행하기
+1.컨테이너로 애플리케이션 실행하기
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
@@ -55,5 +55,5 @@ tags: [Docker, AWS, Ubuntu]
 컨테이너가 생성될 때 이미지로 부터 구체화하고 컨테이너 안의 우분투 파일 시스템상에서 애플리케이션이 실행 된다.
 컨테이너로 애플리케이션을 실행하려면 컨테이너 형태로 구체화될 템플릿 역할을 하는 이미지를 먼저 만들어야 한다.
 
-2. 도커 컨테이너 만들기
+2.도커 컨테이너 만들기
 
