@@ -17,42 +17,42 @@ tags: [Hadoop, BigData]
 
 ## Prerequisties
 
-    * OS : CentOS7
-    * Config
-        * Master Name Node : 1EA
-        * Secondary Name Node : 1EA
-        * Slave Data Node : 2EA
-    * Version
-        * Java : 1.8.0
-        * Hadoop : 2.7.7
+* OS : CentOS7
+* Config
+    * Master Name Node : 1EA
+    * Secondary Name Node : 1EA
+    * Slave Data Node : 2EA
+* Version
+    * Java : 1.8.0
+    * Hadoop : 2.7.7
 
 
 ## Progress
-    1. CentOS 7 install basic setting
-        1.1 hostname
-        1.2 firewalld
-        1.3 timezone
-    2. java 1.8.0 install
-    3. PATH add
-    4. ssh config
-    5. hadoop 2.7.7 install
-        5.1 hadoop-env.sh
-        5.2 yarn-env.sh
-        5.3 core-site.xml
-        5.4 hdfs-site.xml
-        5.5 mapred-site.xml
-        5.6 yarn-site.xml
-        5.7 slave
-    6.slave 배포
-        6.1 hadoop config files / profile
-    7.실행 및 테스트
+1. CentOS 7 install basic setting
+    1.1 hostname
+    1.2 firewalld
+    1.3 timezone
+2. java 1.8.0 install
+3. PATH add
+4. ssh config
+5. hadoop 2.7.7 install
+    5.1 hadoop-env.sh
+    5.2 yarn-env.sh
+    5.3 core-site.xml
+    5.4 hdfs-site.xml
+    5.5 mapred-site.xml
+    5.6 yarn-site.xml
+    5.7 slave
+6.slave 배포
+    6.1 hadoop config files / profile
+7.실행 및 테스트
 
 
 1. CentOS 7 install basic setting
-    - 생략
+- 생략
 
 2. Java 1.8.0 install
-    * 자바 설치
+* 자바 설치
     '''
     $ java -version
     $ rpm -qa | grep jdk
@@ -62,7 +62,7 @@ tags: [Hadoop, BigData]
     '''
 
 3. PATH add
-    * 환경변수 저장
+* 환경변수 저장
 
     '''
     $ vi /etc/profile
@@ -75,7 +75,7 @@ tags: [Hadoop, BigData]
     '''
 
 4. ssh config
-    * ssh-keygen으로 공개키/비밀키를 생성하고, 공개키 내용을 접속할 서버에 저장하면 해당 서버에 Password 없이 SSH 접속이 가능하다.
+* ssh-keygen으로 공개키/비밀키를 생성하고, 공개키 내용을 접속할 서버에 저장하면 해당 서버에 Password 없이 SSH 접속이 가능하다.
     4.1 모든 서버에 ssh 키젠 설치
 
     ```
@@ -100,6 +100,7 @@ tags: [Hadoop, BigData]
     * 설정파일 경로 : /usr/local/hadoop-2.7.7/etc/hadoop
 
     5.1 hadoop-env.sh
+
         ```
         export HADOOP_HOME=/usr/local/hadoop-2.7.7
         export HADOOP_MAPRED_HOME=$HADOOP_HOME
@@ -112,6 +113,7 @@ tags: [Hadoop, BigData]
         ```
 
     5.2 yarn-env.sh
+
         ```
         export JAVA_HOME=/usr/local/jdk1.8.0
         export HADOOP_HOME=/usr/local/hadoop-2.7.7
@@ -124,6 +126,7 @@ tags: [Hadoop, BigData]
         ```
 
     5.3 core-site.xml
+
         ```
         <configuration>
             <property>
@@ -136,9 +139,11 @@ tags: [Hadoop, BigData]
             </property>
         </configuration>
         ```
+
         + 추가 : Cloud Object Storage 연동을 위하여 해당 core-site.xml 파일의 수정이 필요로 하다. 해당파일의 hdfs 경로를
             s3 경로 / AccessKey / SecretAccessKey 항목으로 변환이 필요하다.
             아래 코드는 그 예시를 보여준다.
+
         ```
         <congiguration>
             <property> 
@@ -155,7 +160,9 @@ tags: [Hadoop, BigData]
             </property>
         </configuration>
         ```
+
     5.4 hdfs-site.xml
+
         ```
         <configuration>
             <property>
@@ -180,8 +187,10 @@ tags: [Hadoop, BigData]
             </property>
         </configuration>
         ``` 
+
     5.5 mapred-site.xml
         * 맵리듀스 파일은 해당 경로에 템플릿이 존재한다. 해당 템플릿을 복사하여 사용하자
+
         ```
         <configuration>
             <property>
@@ -190,7 +199,9 @@ tags: [Hadoop, BigData]
             </property>
         </configuration>
         ```
+
     5.6 yarn-site.xml
+
         ```
         <configuration>
         <!-- Site specific YARN configuration properties -->
@@ -216,7 +227,9 @@ tags: [Hadoop, BigData]
         </property>
         </configuration>
         ```
+
     5.7 slave
+
         ```
         hadoop-slave1
         hadoop-slave2
@@ -224,6 +237,7 @@ tags: [Hadoop, BigData]
 
 6. slave 배포
     6.1 hadoop config files / profile
+
         ```
         $ scp -r hadoop-2.7.7 root@hadoop-slave1:/usr/local
         $ scp -r hadoop-2.7.7 root@hadoop-slave2:/usr/local
@@ -233,7 +247,9 @@ tags: [Hadoop, BigData]
         $ scp /etc/profile root@hadoop-slave1:/etc/profile
         $ scp /etc/profile root@hadoop-slave2:/etc/profile
         ```
+
         * 각 Slave 노드들에 Java / Hadoop 설치 확인
+
         ```
         $ java -version
         $ hadoop version
@@ -241,24 +257,29 @@ tags: [Hadoop, BigData]
 
 7. Hadoop 실행 및 테스트
     7.1 실행
+
         ```
         $ hadoop namenode -format
         ```
+
         * ~$HADOOP_HOME/sbin/start-all.sh 으로 실행 ( 중지는 stop-all.sh )
         * 하둡 현황 파악 : localhost:8088
         * HDFS 현황 파악 : localhost:50070
         * jps 명령어를 통해 namenode / datanode 의 동작 프로세스를 확인 가능
 
     7.2 Wordcount 테스트
+
         ```
         $ hdfs dfs -mkdir /input
         $ hdfs dfs -copyFromLocal /usr/local/hadoop-2.7.7/READNE.txt /input
         ```
+
         하둡 파일시스템에 /input 디렉토리를 생성하고 /input에 로컬의 README.txt 업로드
 
         ```
         $ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar wordcount /input/README.txt ~/wordcount-output
         ```
+        
         맵리듀스 작업이 진행되고 결과를 cmd창에 출력한다.
 
         hdfs 현황웹에서 wordcount-output 결과를 확인 할 수 있다.
