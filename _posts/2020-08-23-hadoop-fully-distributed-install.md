@@ -272,6 +272,7 @@ hadoop-slave2
     ```
 
 7.Hadoop 실행 및 테스트
+
     7.1 실행
 
     ```
