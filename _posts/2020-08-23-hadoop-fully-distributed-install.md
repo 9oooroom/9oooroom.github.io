@@ -53,6 +53,8 @@ tags: [Hadoop, BigData]
 
 2. Java 1.8.0 install
 * 자바 설치
+
+
     '''
     $ java -version
     $ rpm -qa | grep jdk
@@ -61,8 +63,10 @@ tags: [Hadoop, BigData]
     Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode)
     '''
 
+
 3. PATH add
 * 환경변수 저장
+
 
     '''
     $ vi /etc/profile
@@ -279,7 +283,7 @@ tags: [Hadoop, BigData]
         ```
         $ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar wordcount /input/README.txt ~/wordcount-output
         ```
-        
+
         맵리듀스 작업이 진행되고 결과를 cmd창에 출력한다.
 
         hdfs 현황웹에서 wordcount-output 결과를 확인 할 수 있다.
