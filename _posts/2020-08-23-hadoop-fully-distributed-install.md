@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Hadoop Fully Distributed install"
-date: 2020-08-32 12:26:00 +0200
-published: 2020-07-19 12:26:00 +0200
+date: 2020-08-23 12:26:00 +0200
+published: 2020-08-23 12:26:00 +0200
 comments: true
 categories: Hadoop
 tags: [Hadoop, BigData]
