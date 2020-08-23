@@ -8,7 +8,6 @@ categories: Hadoop
 tags: [Hadoop, BigData]
 ---
 
-## Abstract
 	* 빅데이터분석이 쉬워진것은 하둡(Hadoop)이 개발되면서 부터이다.
     * 하둡은 대용량 데이터를 적은비용으로 더 빠르게 분석할 수 있는 소프트웨어이며, 빅데이터 처리와 분석을 위한 플랫폼 중 사실상 표준으로 자리잡고 있다
     * 여러대의 컴퓨터로 데이터를 분석하고 저장하는 방식으로 분석에 필요했던 많은 비용과 시간을 단축할 수 있다.
@@ -17,6 +16,7 @@ tags: [Hadoop, BigData]
 <!--more-->
 
 ## Prerequisties
+
     * OS : CentOS7
     * Config
         * Master Name Node : 1EA
