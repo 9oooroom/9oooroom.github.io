@@ -55,20 +55,20 @@ tags: [Hadoop, BigData]
 2.Java 1.8.0 install
 * 자바 설치
 
-'''
+```
 $ java -version
 $ rpm -qa | grep jdk
 java version "1.8.0_261"
 Java(TM) SE Runtime Environment (build 1.8.0_261-b12)
 Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode)
-'''
+```
 
 
 3.PATH add
 * 환경변수 저장
 
 
-'''
+```
 $ vi /etc/profile
 #하둡 home
 export HADOOP_HOME=/usr/local/hadoop-2.7.7
@@ -76,7 +76,7 @@ export HADOOP_HOME=/usr/local/hadoop-2.7.7
 export JAVA_HOME=/usr/local/jdk1.8.0
 export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 export CLASSPATH=$JAVA_HOME/lib:$CLASSPATH
-'''
+```
 
 
 4.ssh config
