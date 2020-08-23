@@ -8,10 +8,10 @@ categories: Hadoop
 tags: [Hadoop, BigData]
 ---
 
-	* 빅데이터분석이 쉬워진것은 하둡(Hadoop)이 개발되면서 부터이다.
-    * 하둡은 대용량 데이터를 적은비용으로 더 빠르게 분석할 수 있는 소프트웨어이며, 빅데이터 처리와 분석을 위한 플랫폼 중 사실상 표준으로 자리잡고 있다
-    * 여러대의 컴퓨터로 데이터를 분석하고 저장하는 방식으로 분석에 필요했던 많은 비용과 시간을 단축할 수 있다.
-    * 페이스북의 자동 이미지검색,금융거래 내역 분석을 통한 사기 방지, 검색 패턴을 통한 광고타겟 및 마케팅 등 여러 분야에서 활용 될 수 있다.
+빅데이터분석이 쉬워진것은 하둡(Hadoop)이 개발되면서 부터이다.
+하둡은 대용량 데이터를 적은비용으로 더 빠르게 분석할 수 있는 소프트웨어이며, 빅데이터 처리와 분석을 위한 플랫폼 중 사실상 표준으로 자리잡고 있다
+여러대의 컴퓨터로 데이터를 분석하고 저장하는 방식으로 분석에 필요했던 많은 비용과 시간을 단축할 수 있다.
+페이스북의 자동 이미지검색,금융거래 내역 분석을 통한 사기 방지, 검색 패턴을 통한 광고타겟 및 마케팅 등 여러 분야에서 활용 될 수 있다.
 
 <!--more-->
 
@@ -28,23 +28,24 @@ tags: [Hadoop, BigData]
 
 
 ## Progress
+
 1. CentOS 7 install basic setting
-    1.1 hostname
-    1.2 firewalld
-    1.3 timezone
+1.1 hostname
+1.2 firewalld
+1.3 timezone
 2. java 1.8.0 install
 3. PATH add
 4. ssh config
 5. hadoop 2.7.7 install
-    5.1 hadoop-env.sh
-    5.2 yarn-env.sh
-    5.3 core-site.xml
-    5.4 hdfs-site.xml
-    5.5 mapred-site.xml
-    5.6 yarn-site.xml
-    5.7 slave
-6.slave 배포
-    6.1 hadoop config files / profile
+5.1. hadoop-env.sh
+5.2. yarn-env.sh
+5.3. core-site.xml
+5.4. hdfs-site.xml
+5.5. mapred-site.xml
+5.6. yarn-site.xml
+5.7. slave
+6. slave 배포
+6.1. hadoop config files / profile
 7.실행 및 테스트
 
 
