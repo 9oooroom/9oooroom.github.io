@@ -49,10 +49,10 @@ tags: [Hadoop, BigData]
 7.실행 및 테스트
 
 
-1. CentOS 7 install basic setting
+1.CentOS 7 install basic setting
 - 생략
 
-2. Java 1.8.0 install
+2.Java 1.8.0 install
 * 자바 설치
 
 '''
@@ -64,7 +64,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.261-b12, mixed mode)
 '''
 
 
-3. PATH add
+3.PATH add
 * 환경변수 저장
 
 
@@ -78,28 +78,40 @@ export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
 export CLASSPATH=$JAVA_HOME/lib:$CLASSPATH
 '''
 
-4. ssh config
+
+4.ssh config
 * ssh-keygen으로 공개키/비밀키를 생성하고, 공개키 내용을 접속할 서버에 저장하면 해당 서버에 Password 없이 SSH 접속이 가능하다.
-    4.1 모든 서버에 ssh 키젠 설치
+
+4.1 모든 서버에 ssh 키젠 설치
+
 
 ```
 $ ssh-keygen -t rsa
 ```
 
+
 ~/.ssh/id_rsa.pub 에 공개키가 저장 된다, 이 공개키의 내용을 접속할 서버의 ~/.ssh/authorized_keys 에 추가 할 것이다.
 접속할 서버의 authorized_keys 파일에 공개키 추가.
+
+
 ```
 $ ssh-copy-id [계정]@[접속할 서버 IP]
 ```
+
+
 ex) ssh-copy-id root@hadoop-slave1
 
 4.2 ssh를 통해 접속 확인
+
+
 ```
 $ ssh [계정]@[접속할 서버 IP]
 ```
+
+
 암호를 묻지 않는다면 올바르게 설정이 된 것임. 각각 모든 서버에 서로 전부 되도록 설정 (자기자신의 서버에도 적용)
 
-5. Hadoop Install
+5.Hadoop Install
 * Namenode 구성 후 datanode로 배포 예정
 * 설정파일 경로 : /usr/local/hadoop-2.7.7/etc/hadoop
 
