@@ -251,52 +251,52 @@ hadoop-slave1
 hadoop-slave2
 ```
 
-6.slave 배포
-    6.1 hadoop config files / profile
+6.slave 배포<br>
+6.1 hadoop config files / profile
 
-    ```
-    $ scp -r hadoop-2.7.7 root@hadoop-slave1:/usr/local
-    $ scp -r hadoop-2.7.7 root@hadoop-slave2:/usr/local
-    ```
+```
+$ scp -r hadoop-2.7.7 root@hadoop-slave1:/usr/local
+$ scp -r hadoop-2.7.7 root@hadoop-slave2:/usr/local
+```
 
-    ```
-    $ scp /etc/profile root@hadoop-slave1:/etc/profile
-    $ scp /etc/profile root@hadoop-slave2:/etc/profile
-    ```
+```
+$ scp /etc/profile root@hadoop-slave1:/etc/profile
+$ scp /etc/profile root@hadoop-slave2:/etc/profile
+```
 
-    * 각 Slave 노드들에 Java / Hadoop 설치 확인
+* 각 Slave 노드들에 Java / Hadoop 설치 확인
 
-    ```
-    $ java -version
-    $ hadoop version
-    ```
+```
+$ java -version
+$ hadoop version
+```
 
-7.Hadoop 실행 및 테스트
+7.Hadoop 실행 및 테스트<br>
 
-    7.1 실행
+7.1 실행
 
-    ```
-    $ hadoop namenode -format
-    ```
+```
+$ hadoop namenode -format
+```
 
-    * ~$HADOOP_HOME/sbin/start-all.sh 으로 실행 ( 중지는 stop-all.sh )
-    * 하둡 현황 파악 : localhost:8088
-    * HDFS 현황 파악 : localhost:50070
-    * jps 명령어를 통해 namenode / datanode 의 동작 프로세스를 확인 가능
+* ~$HADOOP_HOME/sbin/start-all.sh 으로 실행 ( 중지는 stop-all.sh )
+* 하둡 현황 파악 : localhost:8088
+* HDFS 현황 파악 : localhost:50070
+* jps 명령어를 통해 namenode / datanode 의 동작 프로세스를 확인 가능
 
-    7.2 Wordcount 테스트
+7.2 Wordcount 테스트
 
-    ```
-    $ hdfs dfs -mkdir /input
-    $ hdfs dfs -copyFromLocal /usr/local/hadoop-2.7.7/READNE.txt /input
-    ```
+```
+$ hdfs dfs -mkdir /input
+$ hdfs dfs -copyFromLocal /usr/local/hadoop-2.7.7/READNE.txt /input
+```
 
-    하둡 파일시스템에 /input 디렉토리를 생성하고 /input에 로컬의 README.txt 업로드
+하둡 파일시스템에 /input 디렉토리를 생성하고 /input에 로컬의 README.txt 업로드
 
-    ```
-    $ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar wordcount /input/README.txt ~/wordcount-output
-    ```
+```
+$ hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar wordcount /input/README.txt ~/wordcount-output
+```
 
-    맵리듀스 작업이 진행되고 결과를 cmd창에 출력한다.
+맵리듀스 작업이 진행되고 결과를 cmd창에 출력한다.
 
-    hdfs 현황웹에서 wordcount-output 결과를 확인 할 수 있다.
+hdfs 현황웹에서 wordcount-output 결과를 확인 할 수 있다.
