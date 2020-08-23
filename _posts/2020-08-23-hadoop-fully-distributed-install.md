@@ -30,23 +30,23 @@ tags: [Hadoop, BigData]
 ## Progress
 
 1. CentOS 7 install basic setting
-1.1 hostname
-1.2 firewalld
-1.3 timezone
+    1.1 hostname
+    1.2 firewalld
+    1.3 timezone
 2. java 1.8.0 install
 3. PATH add
 4. ssh config
 5. hadoop 2.7.7 install
-5.1. hadoop-env.sh
-5.2. yarn-env.sh
-5.3. core-site.xml
-5.4. hdfs-site.xml
-5.5. mapred-site.xml
-5.6. yarn-site.xml
-5.7. slave
+    5.1. hadoop-env.sh
+    5.2. yarn-env.sh
+    5.3. core-site.xml
+    5.4. hdfs-site.xml
+    5.5. mapred-site.xml
+    5.6. yarn-site.xml
+    5.7. slave
 6. slave 배포
-6.1. hadoop config files / profile
-7.실행 및 테스트
+    6.1. hadoop config files / profile
+7. 실행 및 테스트
 
 
 1.CentOS 7 install basic setting
