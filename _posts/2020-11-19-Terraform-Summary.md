@@ -2,7 +2,7 @@
 layout: default
 title: "Terraform Summary"
 date: 2020-11-19 20:21:00 +0200
-published: 2020-11-19 20:21:00 +0200
+published: 2020-11-19 22:21:00 +0200
 comments: true
 categories: Terraform
 tags: [Terraform, Cloud]
